@@ -4,7 +4,7 @@ Allows you to eager load elements from auto-injected Entry elements on demand fr
 
 ![Screenshot](resources/img/beaver.png)
 
-Related: [Minify for Craft 2.6.x](https://github.com/nystudio107/eagerbeaver)
+Related: [Eager Beaver for Craft 2.6.x](https://github.com/nystudio107/eagerbeaver)
 
 ## Requirements
 
