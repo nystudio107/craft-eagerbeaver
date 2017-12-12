@@ -2,13 +2,13 @@
 
 Allows you to eager load elements from auto-injected Entry elements on demand from your templates.
 
-![Screenshot](resources/img/beaver.png)
+![Screenshot](resources/img/plugin-logo.png)
 
 Related: [Eager Beaver for Craft 2.6.x](https://github.com/nystudio107/eagerbeaver)
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0-RC1 or later.
 
 ## Installation
 

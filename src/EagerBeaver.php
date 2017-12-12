@@ -51,7 +51,7 @@ class EagerBeaver extends Plugin
         self::$plugin = $this;
 
         // Add in our Twig extensions
-        Craft::$app->view->twig->addExtension(new EagerBeaverTwigExtension());
+        Craft::$app->view->registerTwigExtension(new EagerBeaverTwigExtension());
 
         // Register our variables
         Event::on(
