@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2017.02.01
+### Changed
+* Renamed the composer package name to `craft-eagerbeaver`
+
 ## 1.0.1 - 2017.12.06
 ### Changed
 * Updated to require craftcms/cms `^3.0.0-RC1`
