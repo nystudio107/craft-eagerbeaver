@@ -1,8 +1,8 @@
 {
-    "name": "nystudio107/craft3-eagerbeaver",
+    "name": "nystudio107/craft-eagerbeaver",
     "description": "Allows you to eager load elements from auto-injected Entry elements on demand from your templates.",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
@@ -14,8 +14,8 @@
         "eager beaver"
     ],
     "support": {
-        "docs": "https://github.com/nystudio107/craft3-eagerbeaver/blob/master/README.md",
-        "issues": "https://github.com/nystudio107/craft3-eagerbeaver/issues"
+        "docs": "https://github.com/nystudio107/craft-eagerbeaver/blob/master/README.md",
+        "issues": "https://github.com/nystudio107/craft-eagerbeaver/issues"
     },
     "license": "MIT",
     "authors": [
@@ -44,7 +44,7 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft3-eagerbeaver/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-eagerbeaver/master/CHANGELOG.md",
         "components": {
             "eagerBeaverService": "nystudio107\\eagerbeaver\\services\\EagerBeaverService"
         },
