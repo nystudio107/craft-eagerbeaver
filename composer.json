@@ -14,7 +14,7 @@
         "eager beaver"
     ],
     "support": {
-        "docs": "https://github.com/nystudio107/craft-eagerbeaver/blob/master/README.md",
+        "docs": "https://github.com/nystudio107/craft-eagerbeaver/blob/v1/README.md",
         "issues": "https://github.com/nystudio107/craft-eagerbeaver/issues"
     },
     "license": "MIT",
@@ -44,7 +44,7 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-eagerbeaver/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-eagerbeaver/v1/CHANGELOG.md",
         "components": {
             "eagerBeaverService": "nystudio107\\eagerbeaver\\services\\EagerBeaverService"
         },
