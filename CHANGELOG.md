@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.3 - 2018.03.02
+### Changed
+* Fixed deprecation errors from Craft CMS 3 RC13
+
 ## 1.0.2 - 2017.02.01
 ### Changed
 * Renamed the composer package name to `craft-eagerbeaver`
