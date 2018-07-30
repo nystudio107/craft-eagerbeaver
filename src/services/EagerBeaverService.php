@@ -43,17 +43,17 @@ class EagerBeaverService extends Component
     public function eagerLoadElements($elements, $with)
     {
         // Bail if there aren't even any elements
-        if (!$elements || empty($elements)) {
+        if (empty($elements)) {
             return;
         }
 
-        if (!is_array($elements)) {
+        if (!\is_array($elements)) {
             $elements = [$elements];
         }
         // We are assuming all of these elements are of the same type
         /** @var Element $element */
         $element = $elements[0];
-        $elementType = get_class($element);
+        $elementType = \get_class($element);
         Craft::$app->elements->eagerLoadElements($elementType, $elements, $with);
     }
 }

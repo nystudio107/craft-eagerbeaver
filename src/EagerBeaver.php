@@ -2,7 +2,8 @@
 /**
  * Eager Beaver plugin for Craft CMS 3.x
  *
- * Allows you to eager load elements from auto-injected Entry elements on demand from your templates.
+ * Allows you to eager load elements from auto-injected Entry elements on
+ * demand from your templates.
  *
  * @link      https://nystudio107.com
  * @copyright Copyright (c) 2017 nystudio107
@@ -73,8 +74,4 @@ class EagerBeaver extends Plugin
             __METHOD__
         );
     }
-
-    // Protected Methods
-    // =========================================================================
-
 }
