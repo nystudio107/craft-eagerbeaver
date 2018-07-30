@@ -21,5 +21,5 @@
  * @since     1.0.0
  */
 return [
-    'Eager Beaver plugin loaded' => 'Eager Beaver plugin loaded',
+    '{name} plugin loaded'       => '{name} plugin loaded'
 ];
