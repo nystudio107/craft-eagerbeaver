@@ -6,9 +6,10 @@ Allows you to eager load elements from auto-injected Entry elements on demand fr
 
 Related: [Eager Beaver for Craft 2.6.x](https://github.com/nystudio107/eagerbeaver)
 
+Learn More: [Speed up your Craft CMS Templates with Eager Loading](https://nystudio107.com/blog/speed-up-your-craft-cms-templates-with-eager-loading)
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-RC1 or later.
+This plugin requires Craft CMS 3.0.0 or later.
 
 ## Installation
 
@@ -33,6 +34,20 @@ The only rub is that you can't specify this eager loading behavior for `entry`, 
 Eager Beaver is a small plugin that allows you to eager load sub-elements like Assets, Categories, Users, etc. to these auto-injected elements.
 
 This is especially useful if you have pages that use Matrix block "content builders", and thus will typically result in loading a number of relations like Assets contained in Matrix blocks to render a page.
+
+## Do It Natively
+
+Note that on Craft 3, you can do the exact same thing that the Eager Beaver plugin does by using `craft.app.elements.eagerLoadElements`:
+
+```twig
+{% do craft.app.elements.eagerLoadElements(
+    className(entry),
+    [entry],
+    ['assetsField', 'categoriesField.assetField', 'matrixField.blockType:assetsField']
+) %}
+```
+
+The first parameter is the class name of the element type we're eager loading elements into (in this case, an entry). The second parameter is an array of elements we're eager loading elements into (in this case, an array with just our entry in it). Finally, the third parameter is dot-notation of what elements we want to eager load. c.f.: [eagerLoadElements()](https://docs.craftcms.com/api/v3/craft-services-elements.html#public-methods)
 
 ## Configuring Eager Beaver
 
