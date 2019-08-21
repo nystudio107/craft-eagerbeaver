@@ -23,7 +23,7 @@ To install the plugin, follow these instructions.
 
         composer require nystudio107/craft-eagerbeaver
 
-3. Install the plugin via `./craft install/plugin eager-beaver` via the CLI, or in the Control Panel, go to Settings → Plugins and click the “Install” button for Connect.
+3. Install the plugin via `./craft install/plugin eager-beaver` via the CLI, or in the Control Panel, go to Settings → Plugins and click the “Install” button for Eager Beaver.
 
 ## Eager Beaver Overview
 
