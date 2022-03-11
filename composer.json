@@ -1,53 +1,41 @@
 {
-    "name": "nystudio107/craft-eagerbeaver",
-    "description": "Allows you to eager load elements from auto-injected Entry elements on demand from your templates.",
-    "type": "craft-plugin",
-    "version": "1.0.4",
-    "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "craft-plugin",
-        "eager",
-        "loading",
-        "eager loading",
-        "eager beaver"
-    ],
-    "support": {
-        "docs": "https://nystudio107.com/plugins/eager-beaver/documentation",
-        "issues": "https://nystudio107.com/plugins/eager-beaver/support"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "nystudio107",
-            "homepage": "https://nystudio107.com"
-        }
-    ],
-    "require": {
-        "craftcms/cms": "^3.0.0"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-          "nystudio107\\eagerbeaver\\": "src/"
-        }
-    },
-    "extra": {
-        "name": "Eager Beaver",
-        "handle": "eager-beaver",
-        "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-eagerbeaver/v1/CHANGELOG.md",
-        "components": {
-            "eagerBeaverService": "nystudio107\\eagerbeaver\\services\\EagerBeaverService"
-        },
-        "class": "nystudio107\\eagerbeaver\\EagerBeaver"
+  "name": "nystudio107/craft-eagerbeaver",
+  "description": "Allows you to eager load elements from auto-injected Entry elements on demand from your templates.",
+  "type": "craft-plugin",
+  "version": "4.0.0-beta.1",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "eager",
+    "loading",
+    "eager loading",
+    "eager beaver"
+  ],
+  "support": {
+    "docs": "https://nystudio107.com/docs/eager-beaver/",
+    "issues": "https://nystudio107.com/plugins/eager-beaver/support",
+    "source": "https://github.com/nystudio107/craft-eagerbeaver"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "nystudio107",
+      "homepage": "https://nystudio107.com"
     }
+  ],
+  "require": {
+    "craftcms/cms": "^4.0.0-beta.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "nystudio107\\eagerbeaver\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Eager Beaver",
+    "handle": "eager-beaver",
+    "class": "nystudio107\\eagerbeaver\\EagerBeaver"
+  }
 }
