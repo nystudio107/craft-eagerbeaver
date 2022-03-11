@@ -27,7 +27,6 @@ class EagerBeaverService extends Component
 {
     // Public Methods
     // =========================================================================
-
     /**
      * Eager-loads additional elements onto a given set of elements.
      *
@@ -37,10 +36,8 @@ class EagerBeaverService extends Component
      * @param string|array       $with     Dot-delimited paths of the elements
      *                                     that should be eager-loaded into the
      *                                     root elements
-     *
-     * @return void
      */
-    public function eagerLoadElements($elements, $with)
+    public function eagerLoadElements(array $elements, array|string $with): void
     {
         // Bail if there aren't even any elements
         if (empty($elements)) {
@@ -50,10 +47,11 @@ class EagerBeaverService extends Component
         if (!\is_array($elements)) {
             $elements = [$elements];
         }
+
         // We are assuming all of these elements are of the same type
         /** @var Element $element */
         $element = $elements[0];
-        $elementType = \get_class($element);
+        $elementType = $element::class;
         Craft::$app->elements->eagerLoadElements($elementType, $elements, $with);
     }
 }

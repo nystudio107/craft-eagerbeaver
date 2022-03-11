@@ -22,7 +22,7 @@ use craft\base\ElementInterface;
  * @package   EagerBeaver
  * @since     1.0.0
  */
-class EagerBeaverTwigExtension extends \Twig_Extension
+class EagerBeaverTwigExtension extends \Twig\Extension\AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -30,7 +30,7 @@ class EagerBeaverTwigExtension extends \Twig_Extension
     /**
      * @inheritdoc
      */
-    public function getName()
+    public function getName(): string
     {
         return 'EagerBeaver';
     }
@@ -38,10 +38,12 @@ class EagerBeaverTwigExtension extends \Twig_Extension
     /**
      * @inheritdoc
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('eagerLoadElements', [$this, 'eagerLoadElements']),
+            new \Twig\TwigFunction('eagerLoadElements', function (array $elements, array|string $with) : void {
+                $this->eagerLoadElements($elements, $with);
+            }),
         ];
     }
 
@@ -54,10 +56,8 @@ class EagerBeaverTwigExtension extends \Twig_Extension
      * @param string|array       $with     Dot-delimited paths of the elements
      *                                     that should be eager-loaded into the
      *                                     root elements
-     *
-     * @return void
      */
-    public function eagerLoadElements($elements, $with)
+    public function eagerLoadElements(array $elements, array|string $with): void
     {
         EagerBeaver::$plugin->eagerBeaverService->eagerLoadElements($elements, $with);
     }

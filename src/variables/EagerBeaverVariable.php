@@ -28,7 +28,6 @@ class EagerBeaverVariable
 {
     // Public Methods
     // =========================================================================
-
     /**
      * Eager-loads additional elements onto a given set of elements.
      *
@@ -38,10 +37,8 @@ class EagerBeaverVariable
      * @param string|array       $with     Dot-delimited paths of the elements
      *                                     that should be eager-loaded into the
      *                                     root elements
-     *
-     * @return void
      */
-    public function eagerLoadElements($elements, $with)
+    public function eagerLoadElements(array $elements, array|string $with): void
     {
         EagerBeaver::$plugin->eagerBeaverService->eagerLoadElements($elements, $with);
     }
