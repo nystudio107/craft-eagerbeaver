@@ -11,9 +11,8 @@
 
 namespace nystudio107\eagerbeaver\variables;
 
-use nystudio107\eagerbeaver\EagerBeaver;
-
 use craft\base\ElementInterface;
+use nystudio107\eagerbeaver\EagerBeaver;
 
 /**
  * Eager Beaver Variable
@@ -31,14 +30,14 @@ class EagerBeaverVariable
     /**
      * Eager-loads additional elements onto a given set of elements.
      *
-     * @param ElementInterface[] $elements The root element models that should
+     * @param ElementInterface|array $elements The root element models that should
      *                                     be updated with the eager-loaded
      *                                     elements
-     * @param string|array       $with     Dot-delimited paths of the elements
+     * @param string|array $with Dot-delimited paths of the elements
      *                                     that should be eager-loaded into the
      *                                     root elements
      */
-    public function eagerLoadElements(array $elements, array|string $with): void
+    public function eagerLoadElements(ElementInterface|array $elements, array|string $with): void
     {
         EagerBeaver::$plugin->eagerBeaverService->eagerLoadElements($elements, $with);
     }
