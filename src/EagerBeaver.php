@@ -11,14 +11,12 @@
 
 namespace nystudio107\eagerbeaver;
 
-use nystudio107\eagerbeaver\services\EagerBeaverService as EagerBeaverServiceService;
-use nystudio107\eagerbeaver\variables\EagerBeaverVariable;
-use nystudio107\eagerbeaver\twigextensions\EagerBeaverTwigExtension;
-
 use Craft;
 use craft\base\Plugin;
 use craft\web\twig\variables\CraftVariable;
-
+use nystudio107\eagerbeaver\services\EagerBeaverService;
+use nystudio107\eagerbeaver\twigextensions\EagerBeaverTwigExtension;
+use nystudio107\eagerbeaver\variables\EagerBeaverVariable;
 use yii\base\Event;
 
 /**
@@ -28,7 +26,7 @@ use yii\base\Event;
  * @package   EagerBeaver
  * @since     1.0.0
  *
- * @property  EagerBeaverServiceService $eagerBeaverService
+ * @property  EagerBeaverService $eagerBeaverService
  */
 class EagerBeaver extends Plugin
 {
@@ -36,9 +34,39 @@ class EagerBeaver extends Plugin
     // =========================================================================
 
     /**
-     * @var EagerBeaver
+     * @var ?EagerBeaver
      */
-    public static $plugin;
+    public static ?EagerBeaver $plugin = null;
+
+    /**
+     * @var string
+     */
+    public string $schemaVersion = '1.0.0';
+
+    /**
+     * @var bool
+     */
+    public bool $hasCpSection = false;
+
+    /**
+     * @var bool
+     */
+    public bool $hasCpSettings = false;
+
+    // Static Methods
+    // =========================================================================
+
+    /**
+     * @inheritdoc
+     */
+    public function __construct($id, $parent = null, array $config = [])
+    {
+        $config['components'] = [
+            'eagerBeaverService' => EagerBeaverService::class,
+        ];
+
+        parent::__construct($id, $parent, $config);
+    }
 
     // Public Methods
     // =========================================================================
@@ -58,7 +86,7 @@ class EagerBeaver extends Plugin
         Event::on(
             CraftVariable::class,
             CraftVariable::EVENT_INIT,
-            function (Event $event): void {
+            static function (Event $event): void {
                 /** @var CraftVariable $variable */
                 $variable = $event->sender;
                 $variable->set('eagerBeaver', EagerBeaverVariable::class);
