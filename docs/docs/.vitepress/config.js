@@ -14,8 +14,8 @@ module.exports = {
     docsDir: 'docs/docs',
     docsBranch: 'v1',
     algolia: {
-      appId: '',
-      apiKey: '',
+      appId: 'WSHECG363P',
+      apiKey: '3393639615aa5e141656843e87dff0c8',
       indexName: ''
     },
     editLinks: true,
