@@ -14,9 +14,9 @@ module.exports = {
     docsDir: 'docs/docs',
     docsBranch: 'v1',
     algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: ''
+      appId: 'WSHECG363P',
+      apiKey: '3393639615aa5e141656843e87dff0c8',
+      indexName: 'nystudio107-eager-beaver'
     },
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
