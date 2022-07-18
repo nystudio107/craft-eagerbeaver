@@ -42,7 +42,7 @@ class EagerBeaverTwigExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('eagerLoadElements', function (array $elements, array|string $with): void {
+            new TwigFunction('eagerLoadElements', function (ElementInterface|array $elements, array|string $with): void {
                 $this->eagerLoadElements($elements, $with);
             }),
         ];
