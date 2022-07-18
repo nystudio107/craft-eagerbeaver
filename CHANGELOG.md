@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.1 - 2022.08.18
+### Changed
+* Add `allow-plugins` to `composer.json` to allow CI tests to work
+
+### Fixed
+* Fixed an issue with the short syntax type declarations ([#31]https://github.com/nystudio107/craft-eagerbeaver/pull/31)
+
 ## 4.0.0 - 2022.06.01
 ### Added
 * Initial Craft CMS 4 release
