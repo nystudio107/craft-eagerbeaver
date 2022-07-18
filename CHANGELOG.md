@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.5 - 2022.07.18
+### Changed
+* Add `allow-plugins` to `composer.json` to allow CI tests to work
+
 ## 1.0.4 - 2018.07.30
 ### Changed
 * Code cleanup
