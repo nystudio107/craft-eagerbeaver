@@ -2,7 +2,7 @@
   "name": "nystudio107/craft-eagerbeaver",
   "description": "Allows you to eager load elements from auto-injected Entry elements on demand from your templates.",
   "type": "craft-plugin",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "keywords": [
     "craft",
     "cms",
