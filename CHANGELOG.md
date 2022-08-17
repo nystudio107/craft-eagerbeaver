@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.2 - 2022.09.17
+### Changed
+* Handle passing in `ElementQuery`'s and `Collection`'s ([#32](https://github.com/nystudio107/craft-eagerbeaver/issues/32))
+
 ## 4.0.1 - 2022.08.18
 ### Changed
 * Add `allow-plugins` to `composer.json` to allow CI tests to work
